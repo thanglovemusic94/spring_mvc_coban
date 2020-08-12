@@ -1,0 +1,21 @@
+package stackjava.com.springmvc.controller;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+
+import org.apache.commons.io.FileUtils;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+public class UploadFile {
+	@GetMapping("uploadFile/{image}")
+	public byte[] index(@PathVariable("image") String image) throws IOException {
+		String path = "C:/files";
+		Path path = Paths.get(path + File.separator + image);
+		byte[] fileContent = Files.readAllBytes();
+
+		return fileContent;
+	}
+}
