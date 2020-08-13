@@ -18,12 +18,12 @@ public class UploadFile {
 		String path = "C:/files";
 		System.out.println("image" +  image);
 		Path url = Paths.get(path +File.separator+ image);
-		System.out.println("url" + url);
+		
+		System.out.println("url:" + url);
 		String array[] = url.toString().split("\\.");
-		System.out.println(array.length);
 		System.out.println(Arrays.toString(array));
 		System.out.println(array[array.length-1].toString());
-		System.out.println("Files.readAllBytes(url)"+Files.readAllBytes(url));
+		
 		return Files.readAllBytes(url);
 	}
 }

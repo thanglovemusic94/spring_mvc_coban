@@ -20,7 +20,6 @@ public class BaseController {
 		return "index";
 	}
 
-//	@RequestMapping(value = "/uploadFile/{image}", method = RequestMethod.GET)
 	@PostMapping("/uploadFile")
 	public String uploadFile(MyFile myFile, Model model) {
 		model.addAttribute("message", "upload success");
@@ -29,13 +28,14 @@ public class BaseController {
 			
 			MultipartFile multipartFile = myFile.getMultipartFile();
 			String fileName = multipartFile.getOriginalFilename();
+			
 			System.out.println("fileName" + fileName);
+			
 			String path = "C:/files";
 			FileUtils.forceMkdir(new File(path));
 			
 			File file = new File(path,fileName);
 			multipartFile.transferTo(file);
-			model.addAttribute("contentType", multipartFile.getContentType());
 			model.addAttribute("fileName", fileName);
 		} catch (Exception e) {
 			e.printStackTrace();
