@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Tue Aug 18 17:53:06 ICT 2020
-org.eclipse.jst.jee.server\:/binary\:E\:\\code\\springMVC_hivernate_08_2020\\helloSpringmvc\\WebContent\\WEB-INF\\lib\\spring-web-4.0.1.RELEASE.jar=WEB-INF/lib/spring-web-4.0.1.RELEASE.jar

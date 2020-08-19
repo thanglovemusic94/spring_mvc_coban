@@ -12,7 +12,7 @@
 	<h2>Thêm dữ liệu</h2>
 	
 	<c:url var="add" value="/add"></c:url>
-	<form:form action="{add}" method="post" modelAttribute="user">
+	<form:form action="${add}" method="post" modelAttribute="user">
 		<div>
 			<label>name</label>
 			<form:input type="text" path="name" />
@@ -24,11 +24,11 @@
 		</div>
 		
 		<div>
-			<label>email</label>
+			<label>phone</label>
 			<form:input type="number" path="phone" />
 		</div>
 		
-		<button type="submit">Thêm</button>
+		<input type="submit" value="Submit" />
 	</form:form>
 </body>
 </html>

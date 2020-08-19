@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USERS")
+@Table(name = "`user`")
 public class User {
 	
 	@Id
@@ -28,6 +28,10 @@ public class User {
 	
 	
 	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + "]";
+	}
 	public Long getId() {
 		return id;
 	}

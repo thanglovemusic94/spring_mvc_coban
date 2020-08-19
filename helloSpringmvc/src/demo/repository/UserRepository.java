@@ -23,7 +23,7 @@ public class UserRepository {
 		Session session = sessionFactory.getCurrentSession();
 		@SuppressWarnings("unchecked")
 		List<User> users = session.createQuery("from User").list();
-		System.out.println("users: " + Arrays.asList(users));
+		System.out.println("users: " + Arrays.asList(users).toString());
 		return users;
 	}
 

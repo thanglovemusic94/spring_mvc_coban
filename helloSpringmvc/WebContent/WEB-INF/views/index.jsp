@@ -20,13 +20,20 @@
 			<th>name</th>
 			<th>email</th>
 			<th>phone</th>
+			<th colspan="2">
+				hành động
+			</th>
 		</tr>
-		<c:forEach var="users" items="users">
+		<c:forEach var="user" items="${users}" varStatus="loop">
 			<tr>
-				<td>${users.id}</td>
-				<td>${users.name}</td>
-				<td>${users.email}</td>
-				<td>${users.phone}</td>
+				<td>${loop.count}</td>
+				<td>${user.id}</td>
+				<td>${user.name}</td>
+				<c:if test="${user.email} == "></c:if>
+				<td>${user.email}</td>
+				<td>${user.phone}</td>
+				<td>xóa</td>
+				<td>sửa</td>
 			</tr>
 		</c:forEach>
 	</table>

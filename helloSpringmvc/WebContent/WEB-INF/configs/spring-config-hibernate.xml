@@ -33,7 +33,7 @@
 	            <prop key="hibernate.show_sql">false</prop>
 	       </props>
 	    </property>
-		<property name="packagesToScan" value="entity"/>
+		<property name="packagesToScan" value="demo.entity"/>
 	</bean>
 	
 	<!-- Transaction Manager -->

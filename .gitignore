@@ -5,3 +5,7 @@
 *.rar
 /servers/
 /RemoteSystemsTempFiles/
+/SpringMVCUploadFile-1.zip
+/.metadata
+/Servers
+/SpringMVCHibernate.zip
